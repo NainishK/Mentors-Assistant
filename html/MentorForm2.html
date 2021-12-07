@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Mentor Form 2</title>
+    <link rel="stylesheet" type="text/css" href="../files/css/styles.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark black" style="background-color: #373e49">
+        <a class="navbar-brand" href="#"><strong>NR</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">ViewStudentsRecords
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../aspx/MPersonal.aspx">Personal</a>
+                            <a class="dropdown-item" href="AcademicRecords.aspx">Academic</a>
+                            <a class="dropdown-item" href="AttendanceRecords.aspx">Attendance</a>
+                            <a class="dropdown-item" href="SessionalRecords.aspx">Sessional</a>
+                            <a class="dropdown-item" href="CurricularActivities.aspx">Activities</a>
+                        </div>
+                    </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../aspx/MExcelDemo.aspx">SessionalReports<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../aspx/ExcelDemo2.aspx">AttendanceReports<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../aspx/SignOut.aspx">Sign Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6" style="background: linear-gradient(to right, #b51a0c, #61045f);">
+                <form name="AdminForm2" method="post" action="../aspx/MentorForm2.aspx">
+                    <h1 class="display-4">Add Students</h1>
+                    <div class="row">
+                        <div class="col-3">
+                            <input type="text" class="form-control input-sm" id="regNo" name="regNo" placeholder="Registration No.">
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control input-sm" id="sName" name="sName" placeholder="Name of Student">
+                        </div>
+                        <div class="col-3">
+                            <button type="submit" class="btn btn-info pull-right btn-lg" style="margin-left: 10px;" onclick="return checkAll()">Add / Update</button>&nbsp;&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <!--<button type="submit" class="btn btn-success pull-right btn-lg" style="margin-left: 10px;" onclick="return checkAll()">Update</button>&nbsp;&nbsp;&nbsp;-->
+                    <button type="button" class="btn btn-success pull-right btn-lg" style="margin-left: 10px;" onclick="showList()">ShowList</button>&nbsp;&nbsp;&nbsp;
+                        <br />
+                    <br />
+                </form>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function checkAll() {
+            var regNo = MentorForm2.regNo.value;
+            var sName = MentorForm2.sName.value;
+
+            if (regNo == "" || sName == "") {
+                alert("Please fill all the details!");
+                return false;
+            }
+            else
+                return true;
+        }
+
+        function showList() {
+            window.location = "../aspx/StudentsList.aspx";
+        }
+
+        /*function assignM() {
+            if (checkAll()) {
+                window.location.replace("../aspx/AdminForm2.aspx");
+            }
+            else
+                alert("Please select all the details!");
+        }*/
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

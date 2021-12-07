@@ -1,0 +1,40 @@
+﻿body {
+    background-repeat: repeat;
+    background: url("../images/bg-pattern.png"), linear-gradient(to right, #dc2430, #7b4397);
+    background-blend-mode: overlay;
+}
+
+.mynav {
+    color: black;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.mystyle {
+    background-color: black;
+    color: white;
+}
+
+.myrow {
+    background-color: #2d2c2d;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+.mydiv1 {
+    background-color: #2d2c2d;
+    color: #dee2e8;
+}
+.myheading {
+    background-color: black;
+    color: lightgrey;
+}
+
+footer{
+  color: black;
+}
+
